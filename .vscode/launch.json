@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Copali VRAG Retrieval",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "model/copali_vrag_retrieval.py",
+            "args": [
+                "--dataset_file", "./data/test_docVQA.json",
+                "--image_root", "./data/Test",
+                "--image_dir", "DocHaystack_1000",
+                "--output_dir", "./output/copali_colqwen2/docvqa_1000",
+                "--use_question_query"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
